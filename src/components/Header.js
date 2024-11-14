@@ -5,7 +5,7 @@ function Header() {
   return (
     <header className="header">
       <div className="logo">
-        <h1>Your App Logo</h1>
+        <h1>AuroNotes</h1>
       </div>
       <nav>
         <button>Sign In</button>
