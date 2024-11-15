@@ -1,0 +1,33 @@
+/* Sidebar.css */
+.sidebar {
+    width: 250px;
+    background-color: #4a90e2;
+    padding: 20px;
+    color: #fff;
+}
+
+.sidebar-nav {
+    list-style: none;
+}
+
+.sidebar-nav li {
+    margin-bottom: 15px;
+}
+
+.sidebar-nav a {
+    color: #fff;
+    font-size: 16px;
+    display: block;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.sidebar-nav a:hover {
+    background-color: #357ab8;
+}
+
+.sidebar-title {
+    font-size: 18px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}

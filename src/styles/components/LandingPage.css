@@ -1,0 +1,39 @@
+
+/* LandingPage.css */
+.landing-page {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.landing-header {
+    font-size: 2em;
+    color: #4a90e2;
+    margin-bottom: 20px;
+}
+
+.feature-cards {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.feature-card {
+    width: 200px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.feature-card h3 {
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.feature-card p {
+    font-size: 14px;
+    color: #666;
+}

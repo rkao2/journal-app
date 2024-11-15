@@ -1,0 +1,18 @@
+
+/* Footer.css */
+.footer {
+    padding: 15px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    font-size: 14px;
+}
+
+.footer a {
+    color: #4a90e2;
+    margin: 0 10px;
+}
+
+.footer a:hover {
+    color: #357ab8;
+}
