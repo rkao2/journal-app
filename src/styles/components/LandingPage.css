@@ -11,21 +11,27 @@
     margin-bottom: 20px;
 }
 
-.feature-cards {
+/* Parent container for feature cards */
+.feature-highlights {
     display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
+    justify-content: center; /* Center the cards horizontally */
+    gap: 20px; /* Space between cards */
+    flex-wrap: nowrap; /* Allow wrapping to next line if necessary */
     margin-top: 30px;
+    width: 100%; 
 }
 
+/* Individual feature card */
+
 .feature-card {
-    width: 200px;
-    padding: 20px;
-    background-color: #fff;
+    width: 100px;
+    padding: 50px; 
+    background-color: #81b5b0;
     border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    text-align: center;
+    box-shadow: 0 4px 6px rgba(16, 15, 15, 0.1);
+    justify-content: space-around;
+    align-items: center;
+    text-align: center; 
 }
 
 .feature-card h3 {
@@ -35,5 +41,85 @@
 
 .feature-card p {
     font-size: 14px;
-    color: #666;
+    color: #eaeaea;
+}
+
+/* when you try to sign in the box that pops up */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(32, 54, 198, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background-color: rgb(194, 66, 177);
+    padding: 30px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    margin-top: 20px;
+}
+
+form input {
+    width: 100%;
+    /* Full width within the modal */
+    max-width: 250px;
+    /* Optional: limit the width for aesthetics */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+form button[type="submit"] {
+    background-color: #4a90e2;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+form button[type="submit"]:hover {
+    background-color: #3a78c1;
+}
+
+button {
+    background-color: #4a90e2;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin: 10px;
+}
+
+.close-btn {
+    background-color: #ff5c5c;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.close-btn:hover {
+    background-color: #e04b4b;
 }

@@ -1,5 +1,6 @@
 // FeatureCard.js
 import React from 'react';
+import '../styles/components/LandingPage.css';
 
 function FeatureCard({ title, description }) {
   return (
