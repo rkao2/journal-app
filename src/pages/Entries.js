@@ -1,6 +1,7 @@
 
 // Entries.js
 import React, { useState } from 'react';
+import '../styles/pages/Entries.css';
 
 function Entries() {
   const [entries, setEntries] = useState([

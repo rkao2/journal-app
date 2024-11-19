@@ -1,5 +1,6 @@
 // Goals.js
 import React, { useState } from 'react';
+import '../styles/pages/Goals.css';
 
 function Goals() {
   const [goals, setGoals] = useState([

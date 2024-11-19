@@ -19,16 +19,25 @@ function LandingPage() {
   return (
     <div className="landing-page">
       <header>
-        <h1>AuroNotes</h1>
+        <h1>AuraNotes</h1>
         <button onClick={() => openModal('signIn')}>Sign In</button>
         <button onClick={() => openModal('signUp')}>Sign Up</button>
       </header>
       <main>
         <p>Track your thoughts and mood to improve mental health.</p>
         <div className="feature-highlights">
-          <FeatureCard title="Mood Tracking" description="Track your mood daily." />
-          <FeatureCard title="Sentiment Analysis" description="Get insights on emotional trends." />
-          <FeatureCard title="Personalized Prompts" description="Daily reflection prompts." />
+          <FeatureCard title="Mood Tracking" 
+          description="Track your mood daily." 
+          backContent="Analyze your emotions over time with charts and insights." 
+          />
+          <FeatureCard title="Sentiment Analysis" 
+          description="Get insights on emotional trends." 
+          backContent="AI-powered sentiment analysis to track emotional trends"
+          />
+          <FeatureCard title="Personalized Prompts" 
+          description="Daily reflection prompts." 
+          backContent="Stay inspired with AI-generated prompts tailored for you."
+          />
         </div>
       </main>
 

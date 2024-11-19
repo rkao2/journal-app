@@ -1,0 +1,27 @@
+.entries-container {
+    padding: 20px;
+    background-color: #e8f4f8;
+    color: #2c3e50;
+}
+
+.entries-list {
+    list-style: none;
+    padding: 0;
+}
+
+.entries-list-item {
+    margin: 10px 0;
+    padding: 15px;
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+.entries-add-btn {
+    padding: 10px 20px;
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
