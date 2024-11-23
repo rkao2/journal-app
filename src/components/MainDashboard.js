@@ -1,5 +1,7 @@
 
 
+
+/**  
 import React from 'react';
 
 function MainDashboard() {
@@ -15,9 +17,10 @@ function MainDashboard() {
         <div className="profile-icon">Profile</div>
       </nav>
       <Sidebar />
-      {/* Page Content */}
+    
     </div>
   );
 }
 
 export default MainDashboard;
+*/

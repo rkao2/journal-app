@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import '../styles/components/Sidebar.css';
+import { Drawer, Button, List, ListItem, Typography } from '@mui/material';
 
 function Sidebar() {
   const [isOpen, setIsOpen] = useState(true);
@@ -12,25 +12,59 @@ function Sidebar() {
   return (
     <div>
       {/* Toggle button */}
-      <button className="toggle-button" onClick={toggleSidebar}>
+      <Button
+        variant="contained"
+        color="primary"
+        onClick={toggleSidebar}
+        sx={{
+          position: 'absolute',
+          top: 20,
+          left: 20,
+          zIndex: 1300, // Ensures the button is on top of the sidebar
+        }}
+      >
         {isOpen ? 'Close' : 'Open'}
-      </button>
+      </Button>
 
       {/* Sidebar */}
-      <div className={`sidebar ${isOpen ? 'open' : 'closed'}`}>
-        <h3>Quick Navigation</h3>
-        <ul>
-          <li>Daily View</li>
-          <li>Weekly View</li>
-          <li>Monthly View</li>
-        </ul>
-        <h3>Tags and Categories</h3>
-        <ul>
-          <li>Mood: Happy</li>
-          <li>Mood: Anxious</li>
-          {/* Additional tags */}
-        </ul>
-      </div>
+      <Drawer
+        variant="persistent"
+        anchor="left"
+        open={isOpen}
+        sx={{ width: 250, padding: 2, }}
+        classes={{
+          paper: {
+            width: 250,
+            padding: 2,
+          },
+        }}
+      >
+        <Typography variant="h6" gutterBottom>
+          Quick Navigation
+        </Typography>
+        <List>
+          <ListItem button>
+            <Typography variant="body1">Daily View</Typography>
+          </ListItem>
+          <ListItem button>
+            <Typography variant="body1">Weekly View</Typography>
+          </ListItem>
+          <ListItem button>
+            <Typography variant="body1">Monthly View</Typography>
+          </ListItem>
+        </List>
+        <Typography variant="h6" gutterBottom>
+          Tags and Categories
+        </Typography>
+        <List>
+          <ListItem button>
+            <Typography variant="body1">Mood: Happy</Typography>
+          </ListItem>
+          <ListItem button>
+            <Typography variant="body1">Mood: Anxious</Typography>
+          </ListItem>
+        </List>
+      </Drawer>
     </div>
   );
 }

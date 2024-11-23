@@ -1,19 +1,36 @@
 
 // Footer.js
 import React from 'react';
-import '../styles/components/Footer.css';
+import {Box, Typography, Link} from '@mui/material';
+//import '../styles/components/Footer.css';
 
 
 function Footer() {
   return (
-    <footer className="footer">
-      <p>&copy; 2024 AuraNotes</p>
-      <div>
-        <a href="#privacy">Privacy Policy</a> | 
-        <a href="#terms">Terms of Service</a> | 
-        <a href="#contact">Contact</a>
-      </div>
-    </footer>
+    <Box
+      component="footer"
+      sx={{
+        backgroundColor: '#f5f5f5', // Light grey background
+        padding: '20px',
+        textAlign: 'center',
+        borderTop: '1px solid #ddd', // Optional border
+      }}
+    >
+      <Typography variant="body2" color="textSecondary" sx={{ marginBottom: '10px' }}>
+        &copy; 2024 AuraNotes
+      </Typography>
+      <Box>
+        <Link href="#privacy" color="primary" underline="hover" sx={{ margin: '0 10px' }}>
+          Privacy Policy
+        </Link>
+        <Link href="#terms" color="primary" underline="hover" sx={{ margin: '0 10px' }}>
+          Terms of Service
+        </Link>
+        <Link href="#contact" color="primary" underline="hover" sx={{ margin: '0 10px' }}>
+          Contact
+        </Link>
+      </Box>
+    </Box>
   );
 }
 

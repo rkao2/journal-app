@@ -1,21 +1,45 @@
-// Analytics.js
 import React from 'react';
+import { Container, Typography, Box, Card, CardContent } from '@mui/material';
 
 function Analytics() {
   return (
-    <div className="analytics">
-      <h2>Analytics & Insights</h2>
-      <div className="mood-trends">
-        <h3>Mood Trends</h3>
-        <p>Visualize how your mood has changed over time.</p>
-        {/* Mood chart or graphs can be integrated here */}
-      </div>
-      <div className="sentiment-analysis">
-        <h3>Sentiment Analysis</h3>
-        <p>See the emotional trends in your entries over time.</p>
-        {/* Sentiment analysis API data can be displayed here */}
-      </div>
-    </div>
+    <Container maxWidth="md" sx={{ marginTop: 4 }}>
+      <Typography variant="h4" component="h2" gutterBottom>
+        Analytics & Insights
+      </Typography>
+      <Box
+        sx={{
+          display: 'flex',
+          flexDirection: 'column',
+          gap: 3,
+          marginTop: 3,
+        }}
+      >
+        <Card variant="outlined">
+          <CardContent>
+            <Typography variant="h5" component="h3" gutterBottom>
+              Mood Trends
+            </Typography>
+            <Typography variant="body1" color="text.secondary">
+              Visualize how your mood has changed over time.
+            </Typography>
+            {/* Placeholder for future integration of mood charts */}
+          </CardContent>
+        </Card>
+
+        <Card variant="outlined">
+          <CardContent>
+            <Typography variant="h5" component="h3" gutterBottom>
+              Sentiment Analysis
+            </Typography>
+            <Typography variant="body1" color="text.secondary">
+              See the emotional trends in your entries over time.
+            </Typography>
+            {/* Placeholder for future integration of sentiment analysis */}
+          </CardContent>
+        </Card>
+      </Box>
+    </Container>
   );
 }
 

@@ -1,9 +1,14 @@
 import React from 'react';
+import AppBar from '@mui/material/AppBar';
+import Toolbar from '@mui/material/Toolbar';
+import Typography from '@mui/material/Typography';
+import Button from '@mui/material/Button';
 import { NavLink } from 'react-router-dom';
-import '../styles/components/Header.css';
+//import '../styles/components/Header.css';
 
 function Header() {
   return (
+    /**
     <header className="header">
       <div className="logo">
         <h1>AuroNotes</h1>
@@ -34,6 +39,25 @@ function Header() {
       </nav>
     </header>
   );
+
+  **/
+
+  /**
+   * USING MUI to style the header 
+   */
+  <AppBar position="static" color="primary">
+      <Toolbar>
+        <Typography variant="h6" sx={{ flexGrow: 1 }}>
+          AuraNotes
+        </Typography>
+        <Button color="inherit" component={NavLink} to="/home">Home</Button>
+        <Button color="inherit" component={NavLink} to="/entries">Entries</Button>
+        <Button color="inherit" component={NavLink} to="/analytics">Analytics</Button>
+        <Button color="inherit" component={NavLink} to="/settings">Settings</Button>
+      </Toolbar>
+    </AppBar>
+  );
+
 }
 
 export default Header;
