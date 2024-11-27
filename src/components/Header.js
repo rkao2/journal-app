@@ -52,6 +52,7 @@ function Header() {
         </Typography>
         <Button color="inherit" component={NavLink} to="/home">Home</Button>
         <Button color="inherit" component={NavLink} to="/entries">Entries</Button>
+        <Button color="inherit" component={NavLink} to="/goals">Goals</Button>
         <Button color="inherit" component={NavLink} to="/analytics">Analytics</Button>
         <Button color="inherit" component={NavLink} to="/settings">Settings</Button>
       </Toolbar>

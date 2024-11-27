@@ -1,6 +1,5 @@
-// Goals.js
 import React, { useState } from 'react';
-import '../styles/pages/Goals.css';
+import { Button, Typography, Box, Grid2 } from '@mui/material';
 
 function Goals() {
   const [goals, setGoals] = useState([
@@ -8,20 +7,45 @@ function Goals() {
     { id: 2, title: 'Reflect on Positives Weekly', status: 'Completed' },
   ]);
 
+  const handleAddGoal = () => {
+    // Add functionality for adding a new goal
+  };
+
+  const handleMarkComplete = (id) => {
+    setGoals(prevGoals =>
+      prevGoals.map(goal =>
+        goal.id === id ? { ...goal, status: 'Completed' } : goal
+      )
+    );
+  };
+
   return (
-    <div className="goals">
-      <h2>Your Goals & Reminders</h2>
-      <button>Add New Goal</button>
-      <div className="goal-list">
-        {goals.map(goal => (
-          <div key={goal.id} className="goal-item">
-            <h3>{goal.title}</h3>
-            <p>Status: {goal.status}</p>
-            <button>Mark as Complete</button>
-          </div>
+    <Box className="goals" sx={{ padding: 2 }}>
+      <Typography variant="h4" gutterBottom>Your Goals & Reminders</Typography>
+      <Button variant="contained" color="primary" onClick={handleAddGoal}>
+        Add New Goal
+      </Button>
+      <Grid2 container spacing={2} sx={{ marginTop: 2 }}>
+        {goals.map((goal) => (
+          <Grid2 item xs={12} sm={6} md={4} key={goal.id}>
+            <Box className="goal-item" sx={{ border: '1px solid #ddd', borderRadius: 2, padding: 2 }}>
+              <Typography variant="h6">{goal.title}</Typography>
+              <Typography>Status: {goal.status}</Typography>
+              {goal.status !== 'Completed' && (
+                <Button 
+                  variant="contained" 
+                  color="secondary" 
+                  onClick={() => handleMarkComplete(goal.id)} 
+                  sx={{ marginTop: 1 }}
+                >
+                  Mark as Complete
+                </Button>
+              )}
+            </Box>
+          </Grid2>
         ))}
-      </div>
-    </div>
+      </Grid2>
+    </Box>
   );
 }
 
