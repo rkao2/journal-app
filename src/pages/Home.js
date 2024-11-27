@@ -3,7 +3,7 @@ import { Typography, Box, Grid, Card, CardContent, Paper } from '@mui/material';
 
 function Home() {
   return (
-    <Box sx={{ p: 4 }}>
+    <Box sx={{ p: 4, padding: "80px", }}>
       {/* Page Title */}
       <Typography variant="h4" component="h2" gutterBottom>
         Welcome to Your Journal Dashboard!

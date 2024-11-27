@@ -17,9 +17,11 @@ function Sidebar() {
         color="primary"
         onClick={toggleSidebar}
         sx={{
-          position: 'absolute',
-          top: 20,
-          left: 20,
+          position: 'fixed',
+          backgroundColor: '#ffffff',
+          color: '#1976D2',
+          top: 12,
+          left: 130,
           zIndex: 1300, // Ensures the button is on top of the sidebar
         }}
       >
@@ -31,20 +33,23 @@ function Sidebar() {
         variant="persistent"
         anchor="left"
         open={isOpen}
-        sx={{ width: 250, padding: 2, }}
+        sx={{ width: 250, //padding: 2,
+          position: "fixed",
+          "& .MuiDrawer-paper": {width: 250, top: 64, },
+         }}
         classes={{
           paper: {
             width: 250,
-            padding: 2,
+            //padding: 2,
           },
         }}
       >
-        <Typography variant="h6" gutterBottom>
+        <Typography variant="h6" gutterBottom sx={{ paddingLeft: 1 }}>
           Quick Navigation
         </Typography>
         <List>
           <ListItem button>
-            <Typography variant="body1">Daily View</Typography>
+            <Typography variant="body1" sx={{ marginTop: -1 }}> Daily View</Typography>
           </ListItem>
           <ListItem button>
             <Typography variant="body1">Weekly View</Typography>
@@ -53,12 +58,12 @@ function Sidebar() {
             <Typography variant="body1">Monthly View</Typography>
           </ListItem>
         </List>
-        <Typography variant="h6" gutterBottom>
+        <Typography variant="h6" gutterBottom sx={{ paddingLeft: 1 }}>
           Tags and Categories
         </Typography>
         <List>
           <ListItem button>
-            <Typography variant="body1">Mood: Happy</Typography>
+            <Typography variant="body1" sx={{ marginTop: -1 }}>Mood: Happy</Typography>
           </ListItem>
           <ListItem button>
             <Typography variant="body1">Mood: Anxious</Typography>

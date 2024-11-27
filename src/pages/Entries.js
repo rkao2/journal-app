@@ -10,7 +10,7 @@ function Entries() {
   ]);
 
   return (
-    <Container maxWidth="md" sx={{ marginTop: 4 }}>
+    <Container maxWidth="md" sx={{ marginTop: 4, padding: "60px" }}>
       <Typography variant="h4" component="h2" gutterBottom>
         Your Journal Entries
       </Typography>
@@ -25,7 +25,7 @@ function Entries() {
         sx={{
           display: 'flex',
           flexDirection: 'column',
-          gap: 2
+          gap: 2,
         }}
       >
         {entries.map(entry => (
