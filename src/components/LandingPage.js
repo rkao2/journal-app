@@ -15,7 +15,7 @@ const LandingPage = () => {
   };
 
   return (
-    <Box sx={{ textAlign: 'center', padding: '40px', backgroundColor: '#f7f7f7', minHeight: '100vh' }}>
+    <Box sx={{ textAlign: 'center', padding: '80px', backgroundColor: '#f7f7f7', minHeight: '100vh' }}>
       {/* Header Section */}
       <header>
         <Typography variant="h2" sx={{ fontWeight: 'bold', marginBottom: '20px' }}>

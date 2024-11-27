@@ -45,7 +45,7 @@ function Header() {
   /**
    * USING MUI to style the header 
    */
-  <AppBar position="static" color="primary">
+  <AppBar position="fixed" color="primary">
       <Toolbar>
         <Typography variant="h6" sx={{ flexGrow: 1 }}>
           AuraNotes
