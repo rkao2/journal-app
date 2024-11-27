@@ -3,7 +3,7 @@ import { Container, Typography, Box, Card, CardContent } from '@mui/material';
 
 function Analytics() {
   return (
-    <Container maxWidth="md" sx={{ marginTop: 4 }}>
+    <Container maxWidth="md" sx={{ marginTop: 4, padding: "60px",}}>
       <Typography variant="h4" component="h2" gutterBottom>
         Analytics & Insights
       </Typography>
@@ -12,7 +12,7 @@ function Analytics() {
           display: 'flex',
           flexDirection: 'column',
           gap: 3,
-          marginTop: 3,
+          marginTop: 3
         }}
       >
         <Card variant="outlined">

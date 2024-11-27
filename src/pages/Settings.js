@@ -3,7 +3,7 @@ import { Box, Typography, Button, Switch, FormControlLabel, Grid2, Paper } from 
 
 function Settings() {
   return (
-    <Box sx={{ p: 4 }}>
+    <Box sx={{ p: 4, padding: "80px" }}>
       {/* Page Title */}
       <Typography variant="h4" component="h2" gutterBottom>
         Settings
