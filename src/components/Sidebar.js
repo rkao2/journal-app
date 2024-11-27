@@ -35,7 +35,7 @@ function Sidebar() {
         open={isOpen}
         sx={{ width: 250, //padding: 2,
           position: "fixed",
-          "& .MuiDrawer-paper": {width: 250, top: 64, },
+          "& .MuiDrawer-paper": {width: 250, top: 64,},
          }}
         classes={{
           paper: {
