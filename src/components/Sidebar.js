@@ -3,15 +3,21 @@
 
 import React, { useState } from 'react';
 import { Drawer, Button, List, ListItem, Typography } from '@mui/material';
+import { useNavigate } from 'react-router-dom';
 
 function Sidebar() {
   const [isOpen, setIsOpen] = useState(true);
-
+  const navigate = useNavigate();
   const tags = ['Happy', 'Sad', 'Angry', 'Neutral', 'Excited'];
 
   // Function to toggle sidebar visibility
   const toggleSidebar = () => {
     setIsOpen(!isOpen);
+  };
+
+  // Navigate to the selected category
+  const handleTagClick = (tag) => {
+    navigate(`/category/${tag}`);
   };
 
   return (
@@ -73,8 +79,8 @@ function Sidebar() {
         </Typography>
         <List>
           {tags.map((tag, index) => (
-            <ListItem button key={index}>
-              <Typography variant="body1">{tag}</Typography> {/* Display each fixed tag */}
+            <ListItem button key={index} onClick={() => handleTagClick(tag)}>
+              <Typography variant="body1">{tag}</Typography>
             </ListItem>
           ))}
         </List>
