@@ -19,7 +19,7 @@ Our project, AuraNotes, is a web application designed to empower young adults, w
     ```bash
     mongod
     
-3. install dependencies 📦 :
+3. Install dependencies 📦 :
     ```bash
     npm install 
 
