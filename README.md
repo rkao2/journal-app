@@ -10,12 +10,15 @@ Our project, AuraNotes, is a web application designed to empower young adults, w
    cd auranotes
    npm start
 
-   
+
 2. Download mongoDB :
-        https://www.mongodb.com/try/download/community
-        start mongoDB in the terminal : mongod
+    https://www.mongodb.com/try/download/community
+    start mongoDB in the terminal :
+    ```bash
+    mongod
     
 3. install dependencies :
-        npm install 
+    ```bash
+    npm install 
 
 ![aura notes demo](gif/auranotesdemo1.gif)
