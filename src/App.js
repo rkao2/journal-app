@@ -11,7 +11,7 @@ import LandingPage from './components/LandingPage';
 //import pages
 import Home from './pages/Home';
 import Entries from './pages/Entries';
-import Analytics from './pages/Analytics';
+import Analytics from './pages/Analytics/Analytics';
 import Goals from './pages/Goals';
 import Settings from './pages/Settings';
 

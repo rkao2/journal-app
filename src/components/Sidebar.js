@@ -1,8 +1,13 @@
+
+
+
 import React, { useState } from 'react';
 import { Drawer, Button, List, ListItem, Typography } from '@mui/material';
 
 function Sidebar() {
   const [isOpen, setIsOpen] = useState(true);
+
+  const tags = ['Happy', 'Sad', 'Angry', 'Neutral', 'Excited'];
 
   // Function to toggle sidebar visibility
   const toggleSidebar = () => {
@@ -35,7 +40,10 @@ function Sidebar() {
         open={isOpen}
         sx={{ width: 250, //padding: 2,
           position: "fixed",
-          "& .MuiDrawer-paper": {width: 250, top: 64, },
+          "& .MuiDrawer-paper": {
+            width: 250, 
+            top: 64, 
+          },
          }}
         classes={{
           paper: {
@@ -58,16 +66,17 @@ function Sidebar() {
             <Typography variant="body1">Monthly View</Typography>
           </ListItem>
         </List>
+
+
         <Typography variant="h6" gutterBottom sx={{ paddingLeft: 1 }}>
           Tags and Categories
         </Typography>
         <List>
-          <ListItem button>
-            <Typography variant="body1" sx={{ marginTop: -1 }}>Mood: Happy</Typography>
-          </ListItem>
-          <ListItem button>
-            <Typography variant="body1">Mood: Anxious</Typography>
-          </ListItem>
+          {tags.map((tag, index) => (
+            <ListItem button key={index}>
+              <Typography variant="body1">{tag}</Typography> {/* Display each fixed tag */}
+            </ListItem>
+          ))}
         </List>
       </Drawer>
     </div>
