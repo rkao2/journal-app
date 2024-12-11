@@ -13,6 +13,7 @@ Our project, AuraNotes, is a web application designed to empower young adults, w
 
 2. Download mongoDB :
     https://www.mongodb.com/try/download/community
+    
     start mongoDB in the terminal :
     ```bash
     mongod
