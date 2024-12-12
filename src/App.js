@@ -12,6 +12,7 @@ import LandingPage from './components/LandingPage';
 import Home from './pages/Home';
 import Entries from './pages/Entries';
 import Analytics from './pages/Analytics/Analytics';
+import MoodTrend from './pages/Analytics/MoodTrend';
 import Goals from './pages/Goals';
 import Settings from './pages/Settings';
 
@@ -31,10 +32,13 @@ function App() {
               <Route path="/" element={<LandingPage />} />
               <Route path="/home" element={<Home />} />
               <Route path="/entries" element={<Entries />} />
-              <Route path="/analytics" element={<Analytics />} />
               <Route path="/goals" element={<Goals />} />
               {/* Extra footer in settings? */}
               <Route path="/settings" element={<Settings />} />
+
+              {/* Analytics */}
+              <Route path="/analytics" element={<Analytics />} />
+              <Route path="/analytics/mood-trend" element={<MoodTrend />} />
             </Routes>
           </main>
         </div>

@@ -7,9 +7,8 @@ Our project, AuraNotes, is a web application designed to empower young adults, w
 
 1. Install React using the command 🛠️:  
    ```bash
-   npx create-react-app auranotes
-   cd auranotes
-   npm start
+   npm install
+   npm run build
 
 
 2. Download mongoDB 💻:
