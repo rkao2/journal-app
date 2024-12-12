@@ -3,7 +3,7 @@ import { Box, Typography, Button, Switch, FormControlLabel, Grid2, Paper } from 
 
 function Settings() {
   return (
-    <Box sx={{ p: 4, padding: "80px" }}>
+    <Box sx={{ p: 4, padding: "80px", zIndex: -10 }}>
       {/* Page Title */}
       <Typography variant="h4" component="h2" gutterBottom>
         Settings
@@ -11,12 +11,12 @@ function Settings() {
 
       <Grid2 container spacing={3}>
         {/* Account Settings Section */}
-        <Grid2 item xs={12} md={6}>
-          <Paper elevation={2} sx={{ p: 3 }}>
+        <Grid2 item xs={12} md={6} sx={{zIndex:-1}}>
+          <Paper elevation={2} sx={{ p: 3}}>
             <Typography variant="h6" gutterBottom>
               Account Settings
             </Typography>
-            <Button variant="contained" color="primary" sx={{ mr: 2, mb: 1 }}>
+            <Button variant="contained" color="primary" sx={{ mr: 2, mb: 1, zIndex: 1 }}>
               Change Password
             </Button>
             <Button variant="outlined" color="secondary">
