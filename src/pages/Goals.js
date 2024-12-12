@@ -20,15 +20,15 @@ function Goals() {
   };
 
   return (
-    <Box className="goals" sx={{ padding: 2 }}>
+    <Box className="goals" sx={{ padding: 2, zIndex: 1, marginTop: 8 }}>
       <Typography variant="h4" gutterBottom>Your Goals & Reminders</Typography>
-      <Button variant="contained" color="primary" onClick={handleAddGoal}>
+      <Button variant="contained" color="primary" onClick={handleAddGoal} sx={{zIndex: -1}}>
         Add New Goal
       </Button>
-      <Grid2 container spacing={2} sx={{ marginTop: 2 }}>
+      <Grid2 container spacing={2} sx={{ marginTop: 2}}>
         {goals.map((goal) => (
           <Grid2 item xs={12} sm={6} md={4} key={goal.id}>
-            <Box className="goal-item" sx={{ border: '1px solid #ddd', borderRadius: 2, padding: 2 }}>
+            <Box className="goal-item" sx={{ border: '1px solid #ddd', borderRadius: 2, padding: 2}}>
               <Typography variant="h6">{goal.title}</Typography>
               <Typography>Status: {goal.status}</Typography>
               {goal.status !== 'Completed' && (
@@ -36,7 +36,7 @@ function Goals() {
                   variant="contained" 
                   color="secondary" 
                   onClick={() => handleMarkComplete(goal.id)} 
-                  sx={{ marginTop: 1 }}
+                  sx={{ marginTop: 1, zIndex: -1 }}
                 >
                   Mark as Complete
                 </Button>
