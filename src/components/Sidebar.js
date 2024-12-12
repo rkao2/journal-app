@@ -33,7 +33,7 @@ function Sidebar() {
           color: '#1976D2',
           top: 12,
           left: 130,
-          zIndex: 1300, // Ensures the button is on top of the sidebar
+          zIndex: 9998, // Ensures the button is on top of the sidebar
         }}
       >
         {isOpen ? 'Close' : 'Open'}
@@ -48,7 +48,8 @@ function Sidebar() {
           position: "fixed",
           "& .MuiDrawer-paper": {
             width: 250, 
-            top: 64, 
+            top: 64,
+            zIndex: 1000, 
           },
          }}
         classes={{
